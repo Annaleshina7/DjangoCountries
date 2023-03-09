@@ -7,4 +7,13 @@
 5. py manage.py migrate
 6. py manage.py runserver
 ## Задания
-[x] Сделать главную
+[x] Создать проект
+[x] Главная страница
+[x] Страница "countries-list/"
+[x] Страница "country/"
+[x] Страница "languages-list/"
+[x] Страница "language/"
+[x] Модель Country
+[x] Модель Language
+[x] Алфавитный указатель
+[x] Пагинация
