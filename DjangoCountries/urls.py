@@ -19,5 +19,11 @@ import main.views as views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('countries-list/', views.countries_list, name='countries-list'),
+    path('countries-list/<str:letter>/', views.countries_list, name='countries-list'),
+    path('languages-list/', views.languages_list, name='languages-list'),
+    path('country/<int:id>/', views.country, name='country'),
+    path('language/<int:id>/', views.language, name='language'),
+    path('import/', views.import_countries, name='import'), # для переноса данных
     path('admin/', admin.site.urls)
 ]

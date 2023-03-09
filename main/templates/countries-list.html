@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Countries List</h1>
+    <div>
+        <a href="{% url 'countries-list' %}">All</a>
+        {% for letter in letters %}
+        <a href="{% url 'countries-list' letter %}">{{letter}}</a>
+        {% endfor %}
+    </div>
+    <ol>
+        {% for country in countries %}
+        <li><a href="{% url 'country' country.id %}">{{country.country}}</li></a>
+        {% endfor %}
+    </ol>
+    <nav class="pagination">
+        {% for p in paginator.page_range %}
+            {% if countries.number == p %}
+            <span>{{ p }}</span>
+            {% else %}
+            <a href="?page={{ p }}">{{ p }}</a>
+            {% endif %}
+        {% endfor %}
+    </nav>
+</body>
+</html>
