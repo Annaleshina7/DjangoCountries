@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path
 import main.views as views
 
+# TODO: База данных не должна быть под СКВ(git), добавьте ее в .gignore и удалите из под репозитория.
 urlpatterns = [
     path('', views.index, name='index'),
     path('countries-list/', views.countries_list, name='countries-list'),

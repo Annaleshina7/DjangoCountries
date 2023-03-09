@@ -30,16 +30,20 @@ def languages_list(request):
     return render(request, "languages-list.html", {"languages" : languages})
 
 def country(request, id):
+    # TODO: для получения объекта по id, вместо .filter(id=id).first(), используйте метод .get(id=id)
     country = Country.objects.filter(id=id).first()
     languages = country.languages.all()
     return render(request, "country.html", {"country" : country, "languages" : languages})
 
 def language(request, id):
+    # TODO: для получения объекта по id, вместо .filter(id=id).first(), используйте метод .get(id=id)
     language = Language.objects.filter(id = id).first()
     countries = Country.objects.filter(languages__in = [language])
     return render(request, "language.html", {"language" : language, "countries" : countries})
 
 def import_countries(request):
+    # TODO: данный функционал лучше было сделать в виде отдельного скрипта(py-файла)
+    #  и запускать его отдельно до запуска проекта.
     countries = get_countries()
     languages = []
     for country in countries:
