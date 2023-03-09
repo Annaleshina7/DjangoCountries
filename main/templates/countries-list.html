@@ -16,6 +16,7 @@
     </div>
     <ol>
         {% for country in countries %}
+        {# TODO: перекрещивание тегов  #}
         <li><a href="{% url 'country' country.id %}">{{country.country}}</li></a>
         {% endfor %}
     </ol>

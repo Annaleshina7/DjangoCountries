@@ -10,6 +10,7 @@
     <h1>{{language.language}}</h1>
     <ol>
         {% for country in countries %}
+        {# TODO: Т.к. вы ясно злоупотребляете копи-пастом, то перекрещивание тегов перенеслось на все страницы #}
         <li><a href="{% url 'country' country.id %}">{{country.country}}</li></a>
         {% endfor %}
     </ol>

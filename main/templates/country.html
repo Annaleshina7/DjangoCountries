@@ -10,6 +10,7 @@
     <h1>{{country.country}}</h1>
     <ol>
         {% for language in languages %}
+        {# TODO: перекрещивание тегов  #}
         <li><a href="{% url 'language' language.id %}">{{language.language}}</li></a>
         {% endfor %}
     </ol>

@@ -10,6 +10,7 @@
     <h1>Languages List</h1>
     <ol>
         {% for language in languages %}
+        {#   TODO: конечно же и тут  #}
         <li><a href="{% url 'language' language.id %}">{{language.language}}</li></a>
         {% endfor %}
     </ol>

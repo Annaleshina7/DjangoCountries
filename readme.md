@@ -1,5 +1,7 @@
 # DjangoCountries
 ## Запуск проекта
+
+[//]: # (TODO: ваша инструкция написана для windows, это стоило бы явно бозначить)
 1. py -m venv venv
 2. venv\Scripts\activate.bat
 3. cd DjangoCountries
